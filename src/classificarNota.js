@@ -8,8 +8,15 @@
 // - Retorna `"Reprovado"` se nota < 6;
 // - Retorna `"Nota inválida"` se for um valor fora de 0 a 10 ou não numérico.
 
+
 function classificarNota(nota) {
-  // TODO: implementar função
+  if (typeof nota !== 'number' || isNaN(nota) || nota < 0 || nota > 10) {
+    return "Nota inválida";
+  } else if (nota >= 6) {
+    return "Aprovado";
+  } else {
+    return "Reprovado";
+  }
 }
 
 //NÃO REMOVA O CÓDIGO ABAIXO

@@ -11,15 +11,12 @@
 function saudacao(nome, isLogged) {
   nome = nome || "Visitante";
   return isLogged || "Olá, " + nome + "!";
+
+       
+function saudacaoPersonalizada(nome, isLogged) {
+  isLogged && console.log(`Olá, ${nome ?? "Visitante"}!`);
 }
-
-// Testando a função
-console.log(saudacao(null, true)); // Esperado: "Olá, Visitante!"
-console.log(saudacao(undefined, true)); // Esperado: "Olá, Visitante!"
-console.log(saudacao("", true)); // Esperado: "Olá, !"
-console.log(saudacao("Maria", true)); // Esperado: "Olá, Maria!"
-console.log(saudacao("João", false)); // Esperado: undefined
-
-
+}
+//Nao saber isso pode ser crime ????
 //NÃO REMOVA O CÓDIGO ABAIXO
 module.exports = { saudacao };

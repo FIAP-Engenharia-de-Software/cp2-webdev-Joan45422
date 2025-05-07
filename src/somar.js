@@ -6,7 +6,24 @@
 function somar(a, b) {
   let resultado = a + b;
   return resultado;
-}
+  function somar(a, b) {
+    
+    if (typeof a !== 'number') {
+      return "Parâmetro inválido";
+    }
+  
+    
+    if (typeof b === 'undefined') {
+      b = 0;
+    }
+  
+    if (typeof b !== 'number') {
+      return "Parâmetro inválido";
+    }
+  
+   return a + b
+  }
+ }
 
   
   // Testando a função
